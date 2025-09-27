@@ -14,6 +14,7 @@
         @else
             <a href="{{ route('courses.mycourse') }}" class="btn btn-primary">My Course</a>
         @endif
+        <a href="{{ route('logout') }}" class="btn btn-danger">Logout</a>
     </div>
 
     @if(session('success'))

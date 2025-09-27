@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/login', [UserController::class, 'login'])->name('login');
 Route::post('/login', [UserController::class, 'loginAction'])->name('login.action');
-Route::get('logout',[UserController::class, 'logout']);
+Route::get('logout',[UserController::class, 'logout'])->name('logout');
 // Route::get('/user', [UserController::class, 'index']);
 Route::middleware(['auth'])->prefix('courses')->name('courses.')->group(function () {
     Route::get('/', [CourseController::class, 'index'])->name('index');
