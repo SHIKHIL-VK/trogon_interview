@@ -54,7 +54,7 @@
                         @if(auth()->user()->role == 'admin')
                         <a href="{{ route('courses.edit', $course->id) }}" class="btn btn-sm btn-warning">Edit</a>
                         @else
-                        <a href="{{ route('courses.enroll', $course->id) }}" class="btn btn-sm btn-success">{{$course->subscribe->status?'Subscribed':'Enroll'}}</a>
+                        <a href="{{ route('courses.enroll', $course->id) }}" class="btn btn-sm btn-success">{{$course->subscribe->status??false?'Subscribed':'Enroll'}}</a>
                         @endif
                     </td>
                 </tr>
